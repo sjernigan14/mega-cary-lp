@@ -1032,7 +1032,7 @@ a:focus-visible, button:focus-visible {
       <a href="tel:9842289649">984.228.9649</a> ·
       <a href="mailto:welcome@themegaworkout.com">welcome@themegaworkout.com</a>
     </p>
-    <p style="margin-top: 10px; font-size: 11px;">© 2026 The MEGA Workout</p>
+    <p style="margin-top: 10px; font-size: 11px;">© 2026 The MEGA Workout · <a href="https://themegaworkout.com/privacy-policy/" target="_blank" style="color:#A8A8AC;text-decoration:underline">Privacy Policy</a></p>
   </div>
 </footer>
 
@@ -1094,15 +1094,8 @@ document.querySelectorAll('[data-cta]').forEach(el => {
         source_cta: src
       });
 
-      if (isFinal) {
-        fbq('track', 'Lead', {
-          content_name: 'Cary Intro Pack $40',
-          value: 40.00,
-          currency: 'USD'
-        }, {
-          eventID: 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8)
-        });
-      }
+      // Lead event removed 2026-07-05 per audit. Meta's Lead event definition requires user-initiated PII capture.
+      // LP is click-through only. Actual Lead attribution happens at Mariana Tek checkout.
     }
   });
 });
